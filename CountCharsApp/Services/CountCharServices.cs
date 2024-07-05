@@ -10,6 +10,10 @@ namespace CountCharsApp.Services
 
         private static void GetCharacterCount(string userInput)
         {
+            numbersCount = 0;
+            lettersCount = 0;
+            otherCount = 0;
+
             foreach (char character in userInput)
             {
                 if (char.IsDigit(character))
@@ -33,6 +37,7 @@ namespace CountCharsApp.Services
 
             Console.WriteLine($"LETTERS: {lettersCount}\n");
             Console.WriteLine($"DIGITS: {numbersCount}\n");
+            Console.WriteLine($"OTHERS: {otherCount}\n");
         }
     }
 }
